@@ -1,5 +1,9 @@
 App_Data/
 obj/
+vs/
+packages/
+LogApp/App_Data/
+bin/
 
 # Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
 [Bb]in/
