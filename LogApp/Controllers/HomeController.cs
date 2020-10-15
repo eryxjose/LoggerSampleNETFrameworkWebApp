@@ -13,6 +13,18 @@ namespace LogApp.Controllers
             return View();
         }
 
+        /*
+            Endpoint criado para testar erro 500 ao não enviar o parâmetro id na requisição
+            Acesse o url abaixo para disparar a exceção: 
+                
+                localhost/home/teste
+        */
+        public ActionResult Teste(int id)
+        {
+            return View();
+        }
+
+        [Authorize]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

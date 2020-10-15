@@ -21,9 +21,17 @@ namespace LogApp
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            /*
+                Referência as configurações de appender definidas no arquivo Web.Config
+            */
             log4net.Config.XmlConfigurator.Configure();
         }
 
+
+        /*
+            Log e tratamento de mensagens amigáveis para erros da aplicação
+        */
         protected void Application_Error(object sender, EventArgs e)
         {
 
@@ -50,18 +58,18 @@ namespace LogApp
                         routeData.Values.Add("action", "NotFound");
                         break;
                     default:
-                        routeData.Values.Add("action", "Index?auth=s");
+                        routeData.Values.Add("action", "Index");
                         break;
                 }
             }
             else
             {
-                routeData.Values.Add("action", "Index?auth=s");
+                routeData.Values.Add("action", "Index");
             }
 
             routeData.Values.Add("error", ex);
 
-            IController errorController = new webportos.Controllers.ErrorController();
+            IController errorController = new LogApp.Controllers.ErrorController();
             errorController.Execute(new RequestContext(new HttpContextWrapper(Context), routeData));
         }
     }

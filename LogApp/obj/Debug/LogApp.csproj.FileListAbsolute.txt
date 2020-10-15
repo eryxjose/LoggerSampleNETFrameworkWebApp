@@ -106,3 +106,5 @@ C:\Users\eryxj\Source\Repos\LogApp\LogApp\obj\Debug\LogApp.csproj.CoreCompileInp
 C:\Users\eryxj\Source\Repos\LogApp\LogApp\obj\Debug\LogApp.csproj.CopyComplete
 C:\Users\eryxj\Source\Repos\LogApp\LogApp\obj\Debug\LogApp.dll
 C:\Users\eryxj\Source\Repos\LogApp\LogApp\obj\Debug\LogApp.pdb
+C:\Users\eryxj\Source\Repos\LogApp\LogApp\bin\log4net.dll
+C:\Users\eryxj\Source\Repos\LogApp\LogApp\bin\log4net.xml
